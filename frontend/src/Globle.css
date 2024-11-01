@@ -1,0 +1,57 @@
+:root{
+    --text-sm : 0.7rem;
+    --text-md : 0.9rem;
+    --bg-blue :#0866FF;
+    --bg-green : #36A420;
+    --bg-lightgray : #F2F4F7;
+
+}
+
+.bg-blue{
+    background-color: var(--bg-blue) !important;
+}
+
+.bg-green{
+    background-color: var(--bg-green) !important;
+}
+
+.bg-lightgray{
+    background-color: var(--bg-lightgray) !important;
+}
+
+.text-sm{
+    font-size: var(--text-sm) !important;
+}
+
+.text-md{
+    font-size: var(--text-md) !important;
+}
+
+.height-100{
+    height: 100vh !important;
+}
+
+.height-90{
+    height: 90vh !important;
+}
+
+.height-80{
+    height: 80vh !important;
+}
+
+.height-70{
+    height: 70vh !important;
+}
+
+.shadow-0{
+    outline: rgb(32, 57, 223) !important;
+    box-shadow: none !important;
+}
+
+.rounded-full{
+    clip-path: circle() !important;
+}
+
+.dob{
+    font-size: 13px;
+}

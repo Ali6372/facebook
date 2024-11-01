@@ -163,6 +163,35 @@ const registerUser = asyncHandler(async(req , res) => {
     res.send(createdUser);
 });
 
+
+const loginUser = asyncHandler(async(req , res) => {
+
+  const {m_mail,password} = req.body;
+
+  const checkEmail = await userModel.findOne({
+    m_mail,
+  });
+
+
+  if(!checkEmail){
+    res.status(401)
+    throw new Error('The email address or Phone number you entered isnt connected to an account');
+  }
+  
+
+  if(checkEmail && (await bcrypt.compare(password,checkEmail.password))){
+    res.send(checkEmail)
+  }else{
+    throw new Error('Invalid password')
+  }
+
+
+});
+
+
+
+
 module.exports = {
     registerUser,
+    loginUser,
 }
